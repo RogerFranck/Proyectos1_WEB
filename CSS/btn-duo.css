@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+.btn-azul{
+	background-color: #1899d6;
+    color: #fff;
+    padding: 13px 16px;
+    border-width: 0 0 4px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: 'Roboto',sans-serif!important;
+    width: 10em;
+}
+	.btn-azul:hover{
+		background-color: #1cb0f6;
+	}
+.btn-verde{
+	background-color: #7BC805;
+    color: #fff;
+    padding: 13px 16px;
+    border-width: 0 0 4px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: 'Roboto',sans-serif!important;
+    width: 10em;
+}
+	.btn-verde:hover{
+		background-color: #8fe30e;
+	}
+.btn-rojo{
+	background-color:#FE4749;
+    color: #fff;
+    padding: 13px 16px;
+    border-width: 0 0 4px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: 'Roboto',sans-serif!important;
+    width: 10em;
+}
+	.btn-rojo:hover{
+		background-color:#ff0000;
+	}
