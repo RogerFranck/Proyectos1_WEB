@@ -1,0 +1,23 @@
+.center{
+	display: flex;
+	width: 100%;
+	height: auto;
+}
+.landing{
+	width: 50%;
+	padding-top: 200px;
+}
+.dinoimg{
+	width: 50%;
+}
+@media only screen and (max-width: 600px) {
+	.center{
+		display: block;
+	}
+	.landing{
+	width: 100%;
+	}
+	.dinoimg{
+	width: 100%;
+	}
+}
