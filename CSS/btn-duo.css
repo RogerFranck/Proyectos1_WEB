@@ -62,7 +62,7 @@
     cursor: pointer;
     border-radius: 16px;
     font-family: 'Roboto',sans-serif!important;
-    width: 10em;
+    width: auto;
 }
     .btn-naranja:hover{
         background-color:#eb684e;

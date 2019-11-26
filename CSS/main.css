@@ -10,14 +10,21 @@
 .dinoimg{
 	width: 50%;
 }
+.dinodino{
+	width: 500px;
+}
 @media only screen and (max-width: 600px) {
 	.center{
 		display: block;
 	}
 	.landing{
-	width: 100%;
+		width: 100%;
+		padding-top: 20px;
 	}
 	.dinoimg{
-	width: 100%;
+		width: 100%;
+	}
+	.dinodino{
+		width: 300px;
 	}
 }
