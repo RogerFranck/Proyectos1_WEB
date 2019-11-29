@@ -1,30 +1,44 @@
-.center{
-	display: flex;
+.fondo{
+	background-color: #3949AB;
 	width: 100%;
-	height: auto;
 }
-.landing{
-	width: 50%;
-	padding-top: 200px;
+a{
+	color: white;
 }
-.dinoimg{
-	width: 50%;
+a:hover{
+	color: white;
+	text-decoration: none;
 }
-.dinodino{
-	width: 500px;
+.naval{
+	margin-left: 10px; 
+	margin-right: 10px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 15px;
 }
-@media only screen and (max-width: 600px) {
-	.center{
-		display: block;
-	}
-	.landing{
-		width: 100%;
-		padding-top: 20px;
-	}
-	.dinoimg{
-		width: 100%;
-	}
-	.dinodino{
-		width: 300px;
-	}
+.naval:hover{
+	color: #FB8C00;
+}
+.naval-tit{
+	font-size: 20px;
+
+}
+.naval-tit:hover{
+	color: white;
+}
+.descri{
+	margin-top: 60px;
+	color: white;
+	padding-bottom: 60px;
+}
+.Iconoschidos{
+	margin-top: 20px;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+.hijoflex{
+	margin-left: 40px;
+	margin-right: 40px;
 }
