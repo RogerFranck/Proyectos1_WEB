@@ -42,3 +42,29 @@ a:hover{
 	margin-left: 40px;
 	margin-right: 40px;
 }
+.login-yea{
+	justify-content: center;
+	display: flex;
+	margin-top: 80px;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.btn-azul{
+	background-color:#3949AB;
+	width: 100%;
+	cursor: pointer;
+	padding: 5px;
+	border: none;
+	border-radius: 8px 8px 8px 8px;
+	color: white;
+}
+	.btn-azul:hover{
+		background-color: #5E35B1;
+	}
+@media screen and (max-width: 500px){
+
+	.cardinas{
+		width: 95%;
+	}
+
+}
