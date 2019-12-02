@@ -41,3 +41,18 @@
 		margin-left: 20px;
 		margin-top: 20px;
 	}
+.txt-principal{
+	color: white;
+	margin-left: 20px;
+	padding-bottom: 20px;
+}
+	.niveles{
+		width: 180px;
+		height: 150px;
+		background-color:#7E57C2;
+		border-radius: 80px;
+		color: white;
+		padding-top: 50px;
+		margin-left: 20px;
+		margin-top: 20px;
+	}
