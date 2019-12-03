@@ -47,12 +47,31 @@
 	padding-bottom: 20px;
 }
 	.niveles{
-		width: 180px;
-		height: 150px;
+		width: 160px;
+		height: 160px;
 		background-color:#7E57C2;
 		border-radius: 80px;
 		color: white;
-		padding-top: 50px;
+		padding-top: 60px;
 		margin-left: 20px;
 		margin-top: 20px;
+		margin-right: 40px;
 	}
+.turibus{
+	display: flex;
+	flex-wrap: wrap;
+}
+	.iz-ex{
+		width: 50%;
+		margin-top: 80px;
+	}
+	.dr-ex{
+		width: 50%;
+		margin-top: 80px;
+	}
+.juego{
+	justify-content: center;
+	display: flex;
+	margin-top: 100px;
+	width: 100%;
+}
