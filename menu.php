@@ -20,7 +20,11 @@
   <h1 style="margin-left: 20px;">Matemáticas:</h1>
   <div class="box-class">
     <div class="boxes">
-      <center><a href="tema.php"><h2>Multiplicación</h2></a></center>
+      <center><a href="tema.php"><h2>Multiplicación</h2></a>
+        <div class="progress" style="width:80%;">
+          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </center>
     </div>
     <div class="boxes">
       <center><h2>Fracciones</h2></center>
