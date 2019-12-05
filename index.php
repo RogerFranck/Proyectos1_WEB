@@ -9,20 +9,21 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="CSS/btn-duo.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 	<div class="fondo">
 	<nav class="navbar">
-  		<a class="naval naval-tit" href="index.html">Roger´s</a>
+  		<a class="naval naval-tit" href="index.php">Roger´s</a>
   		<div class="nav-dr">
-  			<a href="registro.html" class="naval">Crear cuenta</a>
-  			<a href="login.html" class="naval">Ya tengo cuenta</a>
+  			<a href="registro.php" class="naval">Crear cuenta</a>
+  			<a href="login.php" class="naval">Ya tengo cuenta</a>
   		</div>
 	</nav>
 	<div class="descri">
 		<center>
 		<h1>Aprende con Roger´s</h1>
-		<h3>Mejora tus habilidades con el nuevo sistema de educacion online</h3>
+		<h3>Mejora tus habilidades con el nuevo sistema de educación online</h3>
 		<br>
 		<img src="CSS/dinoway.png" width="200px">
 		</center>

@@ -1,6 +1,10 @@
+.dropdown-menu {
+	 min-width: 0rem;
+}
 .nav-dr{
 	display: flex;
 	flex-wrap: wrap;
+	margin-right: 25px;
 }
 .barra-exp{
 	margin-top: 6px;

@@ -9,14 +9,15 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="CSS/btn-duo.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 	<div class="fondo">
 	<nav class="navbar">
-  		<a class="naval naval-tit" href="index.html">Roger´s</a>
+  		<a class="naval naval-tit" href="index.php">Roger´s</a>
   		<div class="nav-dr">
-  			<a href="registro.html" class="naval">Crear cuenta</a>
-  			<a href="login.html" class="naval">Ya tengo cuenta</a>
+  			<a href="registro.php" class="naval">Crear cuenta</a>
+  			<a href="login.php" class="naval">Ya tengo cuenta</a>
   		</div>
 	</nav>
 	</div>
@@ -26,7 +27,7 @@
   		<div class="card-header" style="background-color:#3949AB;">
   		</div>
   		<div class="card-body">
-    		<h5 class="card-title">Registro</h5>
+    		<h5 class="card-title">Inicio de sesión</h5>
 			<div class="input-group mb-3">
   				<div class="input-group-prepend">
     				<span class="input-group-text" id="basic-addon1"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -38,22 +39,16 @@
 			</div>
 			<div class="input-group mb-3">
   				<div class="input-group-prepend">
-    				<span class="input-group-text" id="basic-addon1"><img src="CSS/email.png"></span>
-  				</div>
-  				<input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
-			</div>
-			<div class="input-group mb-3">
-  				<div class="input-group-prepend">
     				<span class="input-group-text" id="basic-addon1"><img src="CSS/candado.png"></span>
   				</div>
   				<input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
 			</div>
-			<input type="button" value="Crear" class="btn-azul">
+			<input type="button" value="Iniciar" class="btn-azul" onclick="location.href='menu.php'">
   		</div>
   		</div>
   		</div>
 		<center>
-  		<img src="CSS/dinoway.png" width="200px" style="margin-left: 50px;margin-top: 70px;">
+  		<img src="CSS/logo-provi.png" width="200px" style="margin-left: 50px;margin-top: 30px;">
   		</center>
 	</div>
 </body>

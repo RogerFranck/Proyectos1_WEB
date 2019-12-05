@@ -10,16 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="CSS/btn-duo.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
   <link rel="stylesheet" type="text/css" href="CSS/menu.css">
+  <link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 	<div class="fondo">
-	<nav class="navbar">
-  		<a class="naval naval-tit" href="menu.html">Roger´s</a>
-  		<div class="nav-dr">
-        <a href="menu.html" class="naval">Menu</a>
-  			<a href="#" class="naval">Pefil</a>
-  		</div>
-	</nav>
+ <?php include 'nav.php';?>
   <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;">Tabla del 1</h2>
 </div>
 <div class="juego">
@@ -36,9 +31,9 @@
     </div>
     <br>
     <div style="justify-content: center;display: flex;">
-    <input type="buttoon" class="btn btn-primary" value="5" style="width: 100px;margin-right:10px;">
-    <input type="buttoon" class="btn btn-primary" value="5" style="width: 100px;margin-right:10px;">
-    <input type="buttoon" class="btn btn-primary" value="5" style="width: 100px;margin-right:10px;">
+    <input type="button" class="btn btn-primary" value="5" style="width: 100px;margin-right:10px;">
+    <input type="button" class="btn btn-primary" value="2" style="width: 100px;margin-right:10px;">
+    <input type="button" class="btn btn-primary" value="9" style="width: 100px;margin-right:10px;">
     </div>
   </div>
 </div>

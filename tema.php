@@ -10,29 +10,25 @@
 	<link rel="stylesheet" type="text/css" href="CSS/btn-duo.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
   <link rel="stylesheet" type="text/css" href="CSS/menu.css">
+  <link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 	<div class="fondo">
-	<nav class="navbar">
-  		<a class="naval naval-tit" href="menu.html">Roger´s</a>
-  		<div class="nav-dr">
-        <a href="menu.html" class="naval">Menu</a>
-  			<a href="#" class="naval">Pefil</a>
-  		</div>
-	</nav>
+    <?php include 'nav.php';?>
   <div class="txt-principal">
-  <h2>La multiplicacion</h2>
-  <h3>significa las veces que se suma un numero y se representa con una "X"</h3>
+  <h2>La multiplicación</h2>
+  <h3>significa las veces que se suma un número y se representa con una "X"</h3>
   </div>
 	</div>
+
   <br>
-  <h3 style="margin-left: 20px;">Preciona los botones para iniciar las practicas de las tablas</h3>
+  <h3 style="margin-left: 20px;">Preciona los botones para iniciar las prácticas de las tablas</h3>
   <div class="box-class">
     <div class="niveles">
-      <center><h2>1</h2></center>
+      <center><a href="explicacion.php"><h2>1</h2></a></center>
     </div>
     <div class="niveles">
-      <center><a href="explicacion.html"><h2>2</h2></a></center>
+      <center><h2>2</h2></center>
     </div>
     <div class="niveles">
       <center><h2>3</h2></center>
@@ -59,7 +55,7 @@
       <center><h2>10</h2></center>
     </div>
       <div class="niveles">
-      <center><h2>Examen</h2></center>
+      <center><h2>Exámen</h2></center>
     </div>
   </div>
   <br>

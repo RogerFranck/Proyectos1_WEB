@@ -10,27 +10,44 @@
 	<link rel="stylesheet" type="text/css" href="CSS/btn-duo.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
   <link rel="stylesheet" type="text/css" href="CSS/menu.css">
+  <link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<div class="fondo">
-	<nav class="navbar">
-  		<a class="naval naval-tit" href="menu.html">Roger´s</a>
-  		<div class="nav-dr">
-        <a href="menu.html" class="naval">Menu</a>
-  			<a href="#" class="naval">Pefil</a>
-  		</div>
-	</nav>
-  <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;">La tabla del 1</h2>
-</div>
-  <div class="turibus">
-    <div class="iz-ex">
-          <center><iframe width="560" height="315" src="https://www.youtube.com/embed/kMwizihC7XA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  <div class="fondo">
+  <?php include 'nav.php';?>
+  </div>
+  <br>
+  <h1 style="margin-left: 20px;">Matemáticas:</h1>
+  <div class="box-class">
+    <div class="boxes">
+      <center><a href="tema.php"><h2>Multiplicación</h2></a></center>
     </div>
-    <div class="dr-ex">
-      <center><img src="CSS/Tabla-multiplicar-1.jpg" width="200px"><br><br>
-        <input type="button" class="btn-azul" value="Practicas" style="width: 30%;" onclick="location.href='actividades.html'">
-      </center>
+    <div class="boxes">
+      <center><h2>Fracciones</h2></center>
+    </div>
+    <div class="boxes">
+      <center><h2>Fracciones</h2></center>
+    </div>
+    <div class="boxes">
+      <center><h2>Fracciones</h2></center>
     </div>
   </div>
+  <br>
+  <h1 style="margin-left: 20px;">Próximamente:</h1>
+  <div class="box-class">
+    <div class="boxes">
+      <center><h2>Próximamente</h2></center>
+    </div>
+    <div class="boxes">
+      <center><h2>Próximamente</h2></center>
+    </div>
+    <div class="boxes">
+      <center><h2>Próximamente</h2></center>
+    </div>
+    <div class="boxes">
+      <center><h2>Próximamente</h2></center>
+    </div>
+  </div>
+  <br>
 </body>
 </html>
