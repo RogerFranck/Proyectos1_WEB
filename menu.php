@@ -8,8 +8,7 @@
     header("Location:index.php");
   }
 
-  $conexion = mysqli_connect("localhost","root","","rogers") or die ("problemas con la conexion");
-
+  include 'conexion.php';
   $result = mysqli_query($conexion,"SELECT * FROM `temas` WHERE 1");
 
 ?>
@@ -42,7 +41,7 @@
    ?>
 
     <div class="boxes">
-      <center><a href="tema.php?roger=<?php  echo $mostrar['id_temas'] ?>"><h2><?php   echo $mostrar['nombre'] ?></h2></a>
+      <center><a href="tema.php?roger=<?php  echo $mostrar['id_temas'] ?>"><h2><?php   echo utf8_encode($mostrar['nombre']); ?></h2></a>
         <div class="progress" style="width:80%;">
           <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
         </div>

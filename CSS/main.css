@@ -61,7 +61,7 @@ a:hover{
 	.btn-azul:hover{
 		background-color: #5E35B1;
 	}
-@media screen and (max-width: 500px){
+@media screen and (max-width: 400px){
 
 	.cardinas{
 		width: 95%;

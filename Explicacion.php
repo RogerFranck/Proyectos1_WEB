@@ -8,7 +8,7 @@
     header("Location:index.php");
   }
   $v1 = $_GET['dino'];
-  $conexion = mysqli_connect("localhost","root","","rogers") or die ("problemas con la conexion");
+  include 'conexion.php';
 
   $result = mysqli_query($conexion,"SELECT * FROM `niveles` WHERE id_nivel = '".$v1."'");
 
