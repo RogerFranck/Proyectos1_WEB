@@ -1,8 +1,14 @@
+<?php 
+
+  //$conexion = mysqli_connect("localhost","root","","aun_tienes_que_crear_la_base_de_datos_mongol") or die ("problemas con la conexion");
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Regsitro</title>
 	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -21,6 +27,7 @@
   		</div>
 	</nav>
 	</div>
+  <form method="POST">
 	<div class="login-yea">
 	<div class="cardinas">
 	<div class="card" style="width: 100%">
@@ -35,21 +42,21 @@
     				src="https://assets1.lottiefiles.com/packages/lf20_O711lP.json"  background="transparent"  speed="1"  style="width: 20px; height: 20px;"  loop  autoplay >
 					</lottie-player></span>
   				</div>
-  				<input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1">
+  				<input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" name="user">
 			</div>
 			<div class="input-group mb-3">
   				<div class="input-group-prepend">
     				<span class="input-group-text" id="basic-addon1"><img src="CSS/email.png"></span>
   				</div>
-  				<input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
+  				<input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1" name="e-mail">
 			</div>
 			<div class="input-group mb-3">
   				<div class="input-group-prepend">
     				<span class="input-group-text" id="basic-addon1"><img src="CSS/candado.png"></span>
   				</div>
-  				<input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+  				<input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1" name="password">
 			</div>
-			<input type="button" value="Crear" class="btn-azul">
+			<input type="submit" value="Crear" class="btn-azul">
   		</div>
   		</div>
   		</div>
@@ -57,5 +64,23 @@
   		<img src="CSS/dinoway.png" width="200px" style="margin-left: 50px;margin-top: 70px;">
   		</center>
 	</div>
+  </form>
 </body>
 </html>
+<?php 
+
+  if ($_POST) {
+
+    if ($_POST['user']!="" and $_POST['e-mail']!="" and $_POST['password']!="") {
+
+      $usuario = $_POST['user'];
+      $email = $_POST['e-mail'];
+      $password = $_POST['password'];
+
+
+
+    }
+
+  }
+
+ ?>

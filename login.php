@@ -1,8 +1,14 @@
+<?php 
+
+	session_start();
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Inicio</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -21,6 +27,7 @@
   		</div>
 	</nav>
 	</div>
+	<form method="POST">
 	<div class="login-yea">
 	<div class="cardinas">
 	<div class="card" style="width: 100%">
@@ -35,13 +42,13 @@
     				src="https://assets1.lottiefiles.com/packages/lf20_O711lP.json"  background="transparent"  speed="1"  style="width: 20px; height: 20px;"  loop  autoplay >
 					</lottie-player></span>
   				</div>
-  				<input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1">
+  				<input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" name="usu">
 			</div>
 			<div class="input-group mb-3">
   				<div class="input-group-prepend">
     				<span class="input-group-text" id="basic-addon1"><img src="CSS/candado.png"></span>
   				</div>
-  				<input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+  				<input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1" name="password">
 			</div>
 			<input type="button" value="Iniciar" class="btn-azul" onclick="location.href='menu.php'">
   		</div>
@@ -51,5 +58,11 @@
   		<img src="CSS/logo-provi.png" width="200px" style="margin-left: 50px;margin-top: 30px;">
   		</center>
 	</div>
+	</form>
 </body>
 </html>
+<?php 
+
+	
+
+ ?>

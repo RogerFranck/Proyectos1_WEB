@@ -79,3 +79,19 @@
 	margin-top: 100px;
 	width: 100%;
 }
+.btn-azul{
+	width: 30%;
+}
+@media screen and (max-width: 500px){
+
+	.iz-ex{
+		width: 100%;
+	}
+	.dr-ex{
+		width: 100%;
+	}
+	.btn-azul{
+		width: 80%;
+	}
+
+}
