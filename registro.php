@@ -1,6 +1,12 @@
 <?php 
-
-  //$conexion = mysqli_connect("localhost","root","","aun_tienes_que_crear_la_base_de_datos_mongol") or die ("problemas con la conexion");
+  session_start();
+  //COMPRUEBA LA EXITENCIA Y EL TIPO DE USUARIO
+  if (isset($_SESSION['usuario'])) {
+    header("Location:menu.php");
+  } else{
+    
+  } 
+  $conexion = mysqli_connect("localhost","root","","rogers") or die ("problemas con la conexion");
 
  ?>
 <!DOCTYPE html>
@@ -13,7 +19,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="CSS/btn-duo.css">
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
   <link rel="shortcut icon" href="CSS/favicon.ico" type="image/x-icon" />
 </head>
@@ -77,6 +82,12 @@
       $email = $_POST['e-mail'];
       $password = $_POST['password'];
 
+      if ($result = mysqli_query($conexion,
+          "INSERT INTO `usuarios` (`usuario`, `e-mail`, `password`) VALUES ('$usuario', '$email','$password')")) {
+
+          header("Location:login.php");
+
+      }
 
 
     }

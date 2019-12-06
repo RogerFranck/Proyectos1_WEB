@@ -1,6 +1,12 @@
 <?php 
-
-	session_start();
+	 session_start();
+  //COMPRUEBA LA EXITENCIA Y EL TIPO DE USUARIO
+  if (isset($_SESSION['usuario'])) {
+    header("Location:menu.php");
+  } else{
+    
+  }	
+	 $conexion = mysqli_connect("localhost","root","","rogers") or die ("problemas con la conexion");
 
  ?>
 <!DOCTYPE html>
@@ -50,7 +56,7 @@
   				</div>
   				<input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1" name="password">
 			</div>
-			<input type="button" value="Iniciar" class="btn-azul" onclick="location.href='menu.php'">
+			<input type="submit" value="Iniciar" class="btn-azul">
   		</div>
   		</div>
   		</div>
@@ -63,6 +69,30 @@
 </html>
 <?php 
 
+	if ($_POST) {
 	
+	//USUARIO
+	$user = $_POST['usu'];
+	//CONTRASEÑA
+	$pass = $_POST['password'];
+
+	if(empty($user) || empty($pass)) {
+
+	}else{
+		$query = mysqli_query($conexion,"SELECT * FROM `usuarios`  WHERE usuario = '".$user."'");
+
+		if ($row = mysqli_fetch_array($query)) {
+
+			if ($row['password'] == $pass) {
+
+				$_SESSION['usuario'] = $row['usuario'];
+				header("location:menu.php");
+
+			}
+
+		}
+	}
+
+	}
 
  ?>

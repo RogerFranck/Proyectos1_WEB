@@ -1,3 +1,17 @@
+<?php  
+
+  session_start();
+  //COMPRUEBA LA EXITENCIA Y EL TIPO DE USUARIO
+  if (isset($_SESSION['usuario'])) {
+    
+  } else{
+    header("Location:index.php");
+  }
+
+  $conexion = mysqli_connect("localhost","root","","rogers") or die ("problemas con la conexion");
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

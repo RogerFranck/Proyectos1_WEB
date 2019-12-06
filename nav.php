@@ -7,7 +7,7 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" href="menu.php">Inicio</a>
           <a class="dropdown-item" href="#">Progreso</a>
-          <a class="dropdown-item" href="index.php">Salir</a>
+          <a class="dropdown-item" href="log_out.php">Salir</a>
         </div>
       </div>
   		</div>

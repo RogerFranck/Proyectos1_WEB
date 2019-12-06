@@ -1,3 +1,12 @@
+<?php 
+	session_start();
+  //COMPRUEBA LA EXITENCIA Y EL TIPO DE USUARIO
+  if (isset($_SESSION['usuario'])) {
+    header("Location:menu.php");
+  } else{
+    
+  }	
+ ?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,3 +1,21 @@
+<?php  
+
+  session_start();
+  //COMPRUEBA LA EXITENCIA Y EL TIPO DE USUARIO
+  if (isset($_SESSION['usuario'])) {
+    
+  } else{
+    header("Location:index.php");
+  }
+  $v1 = $_GET['roger'];
+  $conexion = mysqli_connect("localhost","root","","rogers") or die ("problemas con la conexion");
+
+  $result = mysqli_query($conexion,"SELECT * FROM `niveles` WHERE id_temas = '".$v1."'");
+  $resulta = mysqli_query($conexion,"SELECT * FROM `temas` WHERE id_temas = '".$v1."'");
+
+  $mostrara= mysqli_fetch_array($resulta);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,47 +34,29 @@
 	<div class="fondo">
     <?php include 'nav.php';?>
   <div class="txt-principal">
-  <h2>La multiplicación</h2>
-  <h3>significa las veces que se suma un número y se representa con una "X"</h3>
+  <h2><?php  echo $mostrara['titulo'] ?></h2>
+  <h3><?php  echo $mostrara['descri'] ?></h3>
   </div>
 	</div>
 
   <br>
-  <h3 style="margin-left: 20px;">Preciona los botones para iniciar las prácticas de las tablas</h3>
+  <h3 style="margin-left: 20px;"><?php  echo $mostrara['texto_ayuda'] ?></h3>
   <div class="box-class">
+
+    <?php  
+
+    while ($mostrar= mysqli_fetch_array($result)) {
+
+   ?>
     <div class="niveles">
-      <center><a href="explicacion.php"><h2>1</h2></a></center>
+      <center><a href="Explicacion.php?dino=<?php  echo $mostrar['id_nivel'] ?>"><h2><?php  echo $mostrar['nivel'] ?></h2></a></center>
     </div>
-    <div class="niveles">
-      <center><h2>2</h2></center>
-    </div>
-    <div class="niveles">
-      <center><h2>3</h2></center>
-    </div>
-    <div class="niveles">
-      <center><h2>4</h2></center>
-    </div>
-    <div class="niveles">
-      <center><h2>5</h2></center>
-    </div>
-    <div class="niveles">
-      <center><h2>6</h2></center>
-    </div>
-      <div class="niveles">
-      <center><h2>7</h2></center>
-    </div>
-    <div class="niveles">
-      <center><h2>8</h2></center>
-    </div>
-      <div class="niveles">
-      <center><h2>9</h2></center>
-    </div>
-        <div class="niveles">
-      <center><h2>10</h2></center>
-    </div>
-      <div class="niveles">
-      <center><h2>Exámen</h2></center>
-    </div>
+    <?php  
+
+      }
+
+   ?>
+
   </div>
   <br>
 </body>

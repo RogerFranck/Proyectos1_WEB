@@ -1,3 +1,18 @@
+<?php  
+
+  session_start();
+  //COMPRUEBA LA EXITENCIA Y EL TIPO DE USUARIO
+  if (isset($_SESSION['usuario'])) {
+    
+  } else{
+    header("Location:index.php");
+  }
+
+  $conexion = mysqli_connect("localhost","root","","rogers") or die ("problemas con la conexion");
+
+  $result = mysqli_query($conexion,"SELECT * FROM `temas` WHERE 1");
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,22 +34,28 @@
   <br>
   <h1 style="margin-left: 20px;">Matemáticas:</h1>
   <div class="box-class">
+
+    <?php  
+
+    while ($mostrar= mysqli_fetch_array($result)) {
+
+   ?>
+
     <div class="boxes">
-      <center><a href="tema.php"><h2>Multiplicación</h2></a>
+      <center><a href="tema.php?roger=<?php  echo $mostrar['id_temas'] ?>"><h2><?php   echo $mostrar['nombre'] ?></h2></a>
         <div class="progress" style="width:80%;">
           <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
       </center>
     </div>
-    <div class="boxes">
-      <center><h2>Fracciones</h2></center>
-    </div>
-    <div class="boxes">
-      <center><h2>Fracciones</h2></center>
-    </div>
-    <div class="boxes">
-      <center><h2>Fracciones</h2></center>
-    </div>
+
+    <?php  
+
+      }
+
+   ?>
+
+
   </div>
   <br>
   <h1 style="margin-left: 20px;">Próximamente:</h1>

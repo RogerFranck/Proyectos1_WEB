@@ -1,3 +1,20 @@
+<?php  
+
+  session_start();
+  //COMPRUEBA LA EXITENCIA Y EL TIPO DE USUARIO
+  if (isset($_SESSION['usuario'])) {
+    
+  } else{
+    header("Location:index.php");
+  }
+  $v1 = $_GET['dino'];
+  $conexion = mysqli_connect("localhost","root","","rogers") or die ("problemas con la conexion");
+
+  $result = mysqli_query($conexion,"SELECT * FROM `niveles` WHERE id_nivel = '".$v1."'");
+
+  $mostrar= mysqli_fetch_array($result);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,17 +32,18 @@
 <body>
 	<div class="fondo">
      <?php include 'nav.php';?>
-  <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;">La tabla del 1</h2>
+  <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;"><?php  echo $mostrar['titulo'] ?></h2>
 </div>
   <div class="turibus">
     <div class="iz-ex">
       <center>
-          <iframe width="90%" height="315" src="https://www.youtube.com/embed/kMwizihC7XA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <?php  echo $mostrar['video'] ?>
           </center>
     </div>
     <div class="dr-ex">
       <center>
-        <img src="CSS/Tabla-multiplicar-1.jpg" width="200px"><br><br>
+        <?php  echo $mostrar['img']?>
+        <br><br>
         <input type="button" class="btn-azul" value="Practicas" onclick="location.href='actividades.php'">
         </center>
     </div>
