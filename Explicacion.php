@@ -8,6 +8,7 @@
     header("Location:index.php");
   }
   $v1 = $_GET['dino'];
+  $v2 = $_GET['roger'];
   include 'conexion.php';
 
   $result = mysqli_query($conexion,"SELECT * FROM `niveles` WHERE id_nivel = '".$v1."'");
@@ -44,7 +45,7 @@
       <center>
         <?php  echo $mostrar['img']?>
         <br><br>
-        <input type="button" class="btn-azul" value="Practicas" onclick="location.href='actividades.php'">
+        <input type="button" class="btn-azul" value="Practicas" onclick="location.href='actividades.php?dino=<?php  echo $v1 ?>&&roger=<?php echo $v2 ?>'">
         </center>
     </div>
   </div>

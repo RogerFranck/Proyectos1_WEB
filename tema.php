@@ -49,7 +49,7 @@
 
    ?>
     <div class="niveles">
-      <center><a href="Explicacion.php?dino=<?php  echo $mostrar['id_nivel'] ?>"><h2><?php  echo utf8_encode($mostrar['nivel']); ?></h2></a></center>
+      <center><a href="Explicacion.php?dino=<?php  echo $mostrar['id_nivel'] ?>&&roger=<?php  echo $v1 ?>"><h2><?php  echo utf8_encode($mostrar['nivel']); ?></h2></a></center>
     </div>
     <?php  
 
