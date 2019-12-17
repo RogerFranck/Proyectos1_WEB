@@ -57,6 +57,7 @@
   				<input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1" name="password">
 			</div>
 			<input type="submit" value="Iniciar" class="btn-azul">
+			<p id="control"></p>
   		</div>
   		</div>
   		</div>
@@ -77,7 +78,7 @@
 	$pass = $_POST['password'];
 
 	if(empty($user) || empty($pass)) {
-
+		echo '<script>document.getElementById("control").innerHTML = "Campo vacio"</script>';
 	}else{
 		$query = mysqli_query($conexion,"SELECT * FROM `usuarios`  WHERE usuario = '".$user."'");
 
@@ -88,8 +89,12 @@
 				$_SESSION['usuario'] = $row['usuario'];
 				header("location:menu.php");
 
+			}else{
+				echo '<script>document.getElementById("control").innerHTML = "Contraseña incorrecta"</script>';
 			}
 
+		}else{
+			echo '<script>document.getElementById("control").innerHTML = "Usuario incorrecto"</script>';
 		}
 	}
 

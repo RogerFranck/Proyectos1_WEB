@@ -12,11 +12,8 @@
 
   $v1 = $_GET['dino'];
   $v2 = $_GET['roger'];
-  $numero = 1;
-
-  if ($_POST) {
-    $numero++;
-  }
+  $v3 = $_GET['numerito'];
+  $numero = $_GET['nivel'] + 1;
 
   $result = mysqli_query($conexion,"SELECT * FROM `juego1` WHERE id_nivel = '".$v1."' AND `numero` = '".$numero."' ");
 
@@ -40,7 +37,7 @@
 <body>
 	<div class="fondo">
  <?php include 'nav.php';?>
-  <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;"><a href="tema.php?roger=<?php  echo $v2 ?>">Tabla del <?php  echo $mostrar['id_nivel'] ?></a></h2>
+  <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;"><a href="tema.php?roger=<?php  echo $v2 ?>"><?php  echo $v3 ?></a></h2>
 </div>
 
 <form method="POST">
@@ -50,7 +47,7 @@
    <h5>Problema <?php  echo $mostrar['numero'] ?></h5>
    <img src="CSS/help.png">
   </div>
-  <div class="card-body">
+  <div class="card-body" id="bo">
     <h6 class="card-title">Resuelve la siguiente multiplicación:</h6>
     <div style="width: 100%;display: flex;justify-content: center;">
     <h3 class="card-text"><?php  echo $mostrar['oper'] ?> = </h3>
@@ -65,10 +62,14 @@
   </div>
   <div class="roger" id="ger">
      <h4 style="margin:10px;">Bien</h4>
-     <input type="submit" name="yes" value="Siguiente" class="btn btn-success" style="margin:10px;">
+     <input type="button" name="yes" value="Siguiente" class="btn btn-success" style="margin:10px;" onclick="location.href='actividades.php?dino=<?php  echo $v1 ?>&&roger=<?php echo $v2 ?>&&nivel=<?php echo $numero ?>&&numerito=<?php echo $v3 ?>'">
   </div>
     <div class="ro" id="ro">
      <h4 style="margin:10px;">vuelve a intentarlo</h4>
+  </div>
+   <div class="card-body" id="gero" style="display: none;">
+     <h5 class="card-text">Actividad completada</h5>
+      <input type="button" name="yes" value="Terminar" class="btn btn-success" style="margin:10px;" onclick="location.href='tema.php?roger=<?php echo $v2 ?>&&numerito=<?php echo $v3 ?>'">
   </div>
 </div>
 </div>
@@ -121,6 +122,13 @@
 
 
     }
+
+      var numero = <?php echo $numero ?>;
+      if (numero==11) {
+          document.getElementById('bo').style.display='none';
+          document.getElementById('gero').style.display='flex';
+       }
+
 
   </script>
 

@@ -33,7 +33,7 @@
 <body>
 	<div class="fondo">
      <?php include 'nav.php';?>
-  <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;"><?php  echo $mostrar['titulo'] ?></h2>
+  <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;"><?php  echo utf8_encode($mostrar['titulo']) ?></h2>
 </div>
   <div class="turibus">
     <div class="iz-ex">
@@ -45,7 +45,7 @@
       <center>
         <?php  echo $mostrar['img']?>
         <br><br>
-        <input type="button" class="btn-azul" value="Practicas" onclick="location.href='actividades.php?dino=<?php  echo $v1 ?>&&roger=<?php echo $v2 ?>'">
+        <input type="button" class="btn-azul" value="Practicas" onclick="location.href='actividades.php?dino=<?php  echo $v1 ?>&&roger=<?php echo $v2 ?>&&nivel=<?php echo 0 ?>&&numerito=<?php echo utf8_encode($mostrar['titulo']) ?>'">
         </center>
     </div>
   </div>
