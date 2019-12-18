@@ -37,7 +37,10 @@
 <body>
 	<div class="fondo">
  <?php include 'nav.php';?>
+ <div style="display: flex;justify-content: space-between;">
   <h2 style="color: white;margin-left: 20px;padding-bottom: 20px;"><a href="tema.php?roger=<?php  echo $v2 ?>"><?php  echo $v3 ?></a></h2>
+  <h2 style="color: white;margin-right: 20px;padding-bottom: 20px;"><a href="juego2.php?dino=<?php  echo $v1 ?>&&roger=<?php echo $v2 ?>&&nivel=<?php echo 0 ?>&&numerito=<?php echo $v3 ?>">Juego 2</a></h2>
+  </div>
 </div>
 
 <form method="POST">
@@ -60,11 +63,11 @@
     <input type="button" class="btn btn-primary" id="3" onclick="veri3()" value="<?php  echo $mostrar['respuesta3'] ?>" style="width: 100px;margin-right:10px;">
     </div>
   </div>
-  <div class="roger" id="ger">
+  <div class="roger" id="ger" style="display: none;">
      <h4 style="margin:10px;">Bien</h4>
      <input type="button" name="yes" value="Siguiente" class="btn btn-success" style="margin:10px;" onclick="location.href='actividades.php?dino=<?php  echo $v1 ?>&&roger=<?php echo $v2 ?>&&nivel=<?php echo $numero ?>&&numerito=<?php echo $v3 ?>'">
   </div>
-    <div class="ro" id="ro">
+    <div class="ro" id="ro" style="display: none;">
      <h4 style="margin:10px;">vuelve a intentarlo</h4>
   </div>
    <div class="card-body" id="gero" style="display: none;">
@@ -77,6 +80,7 @@
   <script type="text/javascript">
 
     var respuesta = "<?php  echo $mostrar['solucion'] ?>";
+    var error = 0;
     function veri1(){
 
       
@@ -88,6 +92,8 @@
       }else{
         document.getElementById("ger").style.display="none";
         document.getElementById("ro").style.display="flex";
+
+        error = error+1;
       }
 
 
@@ -103,6 +109,8 @@
       }else{
         document.getElementById("ger").style.display="none";
         document.getElementById("ro").style.display="flex";
+
+        error = error+1;
       }
 
 
@@ -118,6 +126,8 @@
       }else{
         document.getElementById("ger").style.display="none";
          document.getElementById("ro").style.display="flex";
+
+         error = error+1;
       }
 
 
@@ -128,8 +138,7 @@
           document.getElementById('bo').style.display='none';
           document.getElementById('gero').style.display='flex';
        }
-
-
+  
   </script>
 
 </body>

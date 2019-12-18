@@ -53,7 +53,7 @@
   				<div class="input-group-prepend">
     				<span class="input-group-text" id="basic-addon1"><img src="CSS/email.png"></span>
   				</div>
-  				<input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1" name="e-mail">
+  				<input type="email" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1" name="e-mail">
 			</div>
 			<div class="input-group mb-3">
   				<div class="input-group-prepend">

@@ -86,7 +86,7 @@
 
 			if ($row['password'] == $pass) {
 
-				$_SESSION['usuario'] = $row['usuario'];
+				$_SESSION['usuario'] = $row['Id_usuario'];
 				header("location:menu.php");
 
 			}else{
